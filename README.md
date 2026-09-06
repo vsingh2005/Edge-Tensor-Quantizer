@@ -1,5 +1,10 @@
 # Edge Tensor Quantizer
 
+[![CI](https://github.com/vsingh2005/edge-tensor-quantizer/actions/workflows/ci.yml/badge.svg)](https://github.com/vsingh2005/edge-tensor-quantizer/actions/workflows/ci.yml)
+![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)
+![Code Style: Ruff](https://img.shields.io/badge/code%20style-ruff-000000.svg)
+![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)
+
 A low-level, cache-aware tensor quantization and numerical linear algebra micro-kernel suite designed for resource-constrained embedded microcontrollers, edge NPUs, and CPU vector units.
 
 ## Architecture & Overview
