@@ -2,8 +2,11 @@ name: Continuous Ghost Progression
 
 on:
   schedule:
-    # Runs Monday, Thursday, Saturday at 18:00 UTC (2:00 PM EST)
-    - cron: '0 18 * * 1,4,6'
+    # 4 realistic daily trigger windows (EST): 12:00 PM, 4:15 PM, 8:30 PM, 11:30 PM
+    - cron: '0 16 * * *'
+    - cron: '15 20 * * *'
+    - cron: '30 0 * * *'
+    - cron: '30 3 * * *'
   workflow_dispatch:
 
 permissions:
@@ -42,4 +45,4 @@ jobs:
           GHOST_GIT_EMAIL: ${{ secrets.GHOST_GIT_EMAIL || 'singhvansh@outlook.com' }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          python -m ghost_engine.runner --repo . --force --no-jitter
+          python -m ghost_engine.runner --repo .
