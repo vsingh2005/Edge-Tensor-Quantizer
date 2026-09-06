@@ -5,7 +5,7 @@
 ![Code Style: Ruff](https://img.shields.io/badge/code%20style-ruff-000000.svg)
 ![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)
 
-A low-level, cache-aware tensor quantization and numerical linear algebra micro-kernel suite designed for resource-constrained embedded microcontrollers, edge NPUs, and CPU vector units.
+Low-level tensor quantization and cache-aware linear algebra micro-kernels for edge NPUs and CPU vector units.
 
 ## Architecture & Overview
 
@@ -18,22 +18,12 @@ A low-level, cache-aware tensor quantization and numerical linear algebra micro-
 ```
 
 ## Features
+
 - **Symmetric & Asymmetric INT8 Quantization**: Per-tensor and per-channel affine transformation mappings.
 - **Hardware Cache Tiling**: Loop-tiled matrix multiplication (`GEMM`) designed to fit L1/L2 cache lines and eliminate TLB thrashing.
 - **Dynamic Scale Calibration**: MinMax and histogram-based clipping thresholds to minimize quantization SNR loss.
-- **Numerical Verification**: Direct Mean Squared Error (MSE) and Cosine Similarity evaluation harnesses.
+- **Numerical Verification**: Mean Squared Error (MSE) and Cosine Similarity evaluation harnesses.
 
 ## Tech Stack
-- **Languages**: Python 3.11+ / C++ Interop
-- **Numerics & Vectorization**: NumPy, SciPy
-- **Testing & Benchmarks**: Pytest, Ruff
 
-## Quickstart
-
-```bash
-# Install package
-pip install -e .
-
-# Run test suite
-pytest tests/ -v
-```
+Python 3.11+, C++ Interop, NumPy, SciPy, Pytest
