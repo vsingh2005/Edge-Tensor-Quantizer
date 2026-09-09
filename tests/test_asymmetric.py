@@ -1,6 +1,3 @@
-"""
-Unit tests for asymmetric quantization.
-"""
 import numpy as np
 from edge_quantizer.asymmetric import AsymmetricQuantizer
 
